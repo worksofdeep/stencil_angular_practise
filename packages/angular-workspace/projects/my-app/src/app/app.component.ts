@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+
+  formSubmitted(event: any) {
+    console.log("angular component:", event['detail'])
+  }
 }

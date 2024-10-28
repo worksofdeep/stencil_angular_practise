@@ -2,7 +2,13 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "packages/*"
+    
+   
+    "packages/user-details-form",
+    "packages/angular-workspace"
+  ],
+  "//": [
+    "packages/form-library"
   ],
   "dependencies": {},
   "devDependencies": {

@@ -5,6 +5,12 @@
     "paths": {
       "angular-form-library": [
         "dist/angular-form-library"
+      ],
+      "user-details-form": [
+        "dist/user-details-form"
+      ],
+      "user-details-library": [
+        "dist/user-details-library"
       ]
     },
     "baseUrl": "./",

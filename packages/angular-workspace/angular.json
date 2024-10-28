@@ -126,6 +126,72 @@
           }
         }
       }
+    },
+    "user-details-form": {
+      "projectType": "library",
+      "root": "projects/user-details-form",
+      "sourceRoot": "projects/user-details-form/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/user-details-form/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/user-details-form/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/user-details-form/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/user-details-form/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "user-details-library": {
+      "projectType": "library",
+      "root": "projects/user-details-library",
+      "sourceRoot": "projects/user-details-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/user-details-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/user-details-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/user-details-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/user-details-library/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }
