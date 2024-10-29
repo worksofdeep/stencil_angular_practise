@@ -3,12 +3,16 @@
   "private": true,
   "workspaces": [
     
-   
-    "packages/user-details-form",
-    "packages/angular-workspace"
+    "packages/angular-workspace",
+    "packages/user-details-form"
+    
   ],
   "//": [
-    "packages/form-library"
+    "packages/angular-workspace",
+
+    "packages/form-library",
+    "packages/user-details-form"
+    
   ],
   "dependencies": {},
   "devDependencies": {

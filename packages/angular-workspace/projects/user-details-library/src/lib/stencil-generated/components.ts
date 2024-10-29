@@ -8,13 +8,14 @@ import { Components } from 'user-details-form';
 
 
 @ProxyCmp({
+  inputs: ['resetForm']
 })
 @Component({
   selector: 'user-details-form',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [],
+  inputs: ['resetForm'],
 })
 export class UserDetailsForm {
   protected el: HTMLElement;

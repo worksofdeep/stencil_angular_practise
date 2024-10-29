@@ -17,7 +17,7 @@ import { defineCustomElements } from 'user-details-form/loader';
       provide: APP_INITIALIZER,
       useFactory: () => defineCustomElements,
       multi: true
-    },
+    }
   ]
 })
 export class UserDetailsLibraryModule { }

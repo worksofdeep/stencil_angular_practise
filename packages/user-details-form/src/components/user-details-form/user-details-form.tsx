@@ -1,4 +1,4 @@
-import { AttachInternals, Component, Event, EventEmitter, h, State } from '@stencil/core';
+import { AttachInternals, Component, Event, EventEmitter, h, Prop, State, Watch } from '@stencil/core';
 
 @Component({
   tag: 'user-details-form',
@@ -8,9 +8,23 @@ import { AttachInternals, Component, Event, EventEmitter, h, State } from '@sten
 })
 export class UserDetailsForm {
 
-  @State() username: string
-  @State() role: string
+  @State() username: string = ''
+  @State() role: string = 'none'
   @State() skills = []
+  @Prop() resetForm = false;
+
+  @Watch('resetForm')
+  watchPropHandler(newValue: boolean, oldValue: boolean) {
+    console.log('The old value of activated is: ', oldValue);
+    console.log('The new value of activated is: ', newValue);
+    this.resetFormValues();
+  }
+
+  resetFormValues() {
+    this.username = '';
+    this.role = 'none';
+    this.skills = [];
+  }
 
   @AttachInternals() internals: ElementInternals;
   @Event({
@@ -72,8 +86,22 @@ export class UserDetailsForm {
             onInput={(e) => this.handleChange(e)}></input>
         </div>
 
+        <div class="mt-15" onChange={this.handleRadio.bind(this)}>
+          <span>Role:</span>
+          <input type='radio' name='role' value="developer" checked={this.role === 'developer'}></input>
+          <label htmlFor='role'>Developer</label>
 
-        <div class="mt-15">
+          <input type='radio' name='role' value="tester" checked={this.role === 'tester'}></input>
+          <label htmlFor='role'>Tester</label>
+
+          <input type='radio' name='role' value="manager" checked={this.role === 'manager'}></input>
+          <label htmlFor='role'>Manager</label>
+
+          <input type='radio' name='role' value="none" checked={this.role === 'none'}></input>
+          <label htmlFor='role'>N/A</label>
+        </div>
+
+        {/* <div class="mt-15">
           <span>Role:</span>
           <input type='radio' name='role' value="developer" onChange={(e) => this.handleRadio(e)}></input>
           <label htmlFor='role'>Developer</label>
@@ -83,7 +111,10 @@ export class UserDetailsForm {
 
           <input type='radio' name='role' value="manager" onChange={(e) => this.handleRadio(e)}></input>
           <label htmlFor='role'>Manager</label>
-        </div>
+
+          <input type='radio' name='role' value="" onChange={(e) => this.handleRadio(e)}></input>
+          <label htmlFor='role'>N/A</label>
+        </div> */}
 
 
         {/* <div class="mt-15">

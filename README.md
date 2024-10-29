@@ -20,11 +20,15 @@ LERNA
 
 Creating a Stencil Component Library
 
-1. npm init stencil components stencil-library
+1. npm init stencil 
+    components  --> selection
+      stencil-library --> project-name
 2. cd stencil-library
-3. npm install                                      --> # Install dependencies
+3. npm install   --> # Install dependencies
 4. npm start  --> to run test
 
+5. npx stencil generate --> Generate New component
+    enter component name
 -----------------------------------------------------------------------
 
 Creating an Angular Component Library
@@ -143,3 +147,9 @@ export class AppModule {}
 
 4. app.component.html:
 <my-component first="Your" last="Name"></my-component>
+
+--------
+
+defineCustomElements error
+
+run ng cache clean --> to resolve sometimes due to cache error

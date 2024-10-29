@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface UserDetailsForm {
+        "resetForm": boolean;
     }
 }
 export interface UserDetailsFormCustomEvent<T> extends CustomEvent<T> {
@@ -38,6 +39,7 @@ declare global {
 declare namespace LocalJSX {
     interface UserDetailsForm {
         "onFormCompleted"?: (event: UserDetailsFormCustomEvent<any>) => void;
+        "resetForm"?: boolean;
     }
     interface IntrinsicElements {
         "user-details-form": UserDetailsForm;
