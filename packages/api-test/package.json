@@ -39,6 +39,7 @@
     "generate": "stencil generate"
   },
   "devDependencies": {
+    "@stencil/angular-output-target": "^0.10.0",
     "@stencil/core": "^4.7.0",
     "@types/jest": "^29.5.6",
     "@types/node": "^16.18.11",
@@ -46,5 +47,8 @@
     "jest-cli": "^29.7.0",
     "puppeteer": "^21.9.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }

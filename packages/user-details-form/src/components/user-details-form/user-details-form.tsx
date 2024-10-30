@@ -101,21 +101,6 @@ export class UserDetailsForm {
           <label htmlFor='role'>N/A</label>
         </div>
 
-        {/* <div class="mt-15">
-          <span>Role:</span>
-          <input type='radio' name='role' value="developer" onChange={(e) => this.handleRadio(e)}></input>
-          <label htmlFor='role'>Developer</label>
-
-          <input type='radio' name='role' value="tester" onChange={(e) => this.handleRadio(e)}></input>
-          <label htmlFor='role'>Tester</label>
-
-          <input type='radio' name='role' value="manager" onChange={(e) => this.handleRadio(e)}></input>
-          <label htmlFor='role'>Manager</label>
-
-          <input type='radio' name='role' value="" onChange={(e) => this.handleRadio(e)}></input>
-          <label htmlFor='role'>N/A</label>
-        </div> */}
-
 
         {/* <div class="mt-15">
           <span>Skills:</span>

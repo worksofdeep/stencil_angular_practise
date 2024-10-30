@@ -1,6 +1,15 @@
-<my-component first="Your" last="Name" ></my-component>
+
 <user-details-form (formCompleted)="formSubmitted($event)" [resetForm]="resetForm"></user-details-form>
 
 <div>
     <button (click)="resetUserDetails()">RESET USER DETAILS FORM</button>
 </div>
+
+<hr>
+
+<my-component (tableUpdated)="tableUpdated($event)"></my-component>
+
+<hr>
+
+<table-display-tag [tableData]="temp"></table-display-tag>
+

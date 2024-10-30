@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AngularFormLibraryModule } from 'angular-form-library';
 import { UserDetailsLibraryModule } from 'user-details-library';
+import { TableDisplayLibModule } from 'table-display-lib';
 // import { MyComponent } from 'angular-form-library';
 
 
@@ -15,7 +16,8 @@ import { UserDetailsLibraryModule } from 'user-details-library';
   imports: [
     BrowserModule, 
     AngularFormLibraryModule,
-    UserDetailsLibraryModule
+    UserDetailsLibraryModule,
+    TableDisplayLibModule
   ],
   exports: [
     // MyComponent

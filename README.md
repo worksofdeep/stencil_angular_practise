@@ -55,7 +55,8 @@ npm uninstall jasmine-core @types/jasmine  --> remove jasmine
 
 Adding the Angular Output Target
 
-1. npm install @stencil/angular-output-target --save-dev    --> # Install dependency
+1. npm install @stencil/angular-output-target --save-dev    
+    --> # Install dependency
 2. In stencil.config.ts, add the "angularOutputTarget" configuration to the outputTargets array:
 
 import { angularOutputTarget } from '@stencil/angular-output-target';

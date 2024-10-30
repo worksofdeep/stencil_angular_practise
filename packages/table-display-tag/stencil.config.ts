@@ -1,9 +1,8 @@
 import { Config } from '@stencil/core';
 import { angularOutputTarget } from '@stencil/angular-output-target';
 
-
 export const config: Config = {
-  namespace: 'api-test',
+  namespace: 'table-display-tag',
   outputTargets: [
     {
       type: 'dist',
@@ -22,10 +21,10 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
     angularOutputTarget({              
-      componentCorePackage: 'api-test',
+      componentCorePackage: 'table-display-tag',
       outputType: 'component',
-      directivesProxyFile: '../angular-workspace/projects/api-lib/src/lib/stencil-generated/components.ts',
-      directivesArrayFile: '../angular-workspace/projects/api-lib/src/lib/stencil-generated/index.ts',
+      directivesProxyFile: '../angular-workspace/projects/table-display-lib/src/lib/stencil-generated/components.ts',
+      directivesArrayFile: '../angular-workspace/projects/table-display-lib/src/lib/stencil-generated/index.ts',
     }),
   ],
   testing: {

@@ -6,6 +6,9 @@
       "angular-form-library": [
         "dist/angular-form-library"
       ],
+      "table-display-lib": [
+        "dist/table-display-lib"
+      ],
       "user-details-form": [
         "dist/user-details-form"
       ],

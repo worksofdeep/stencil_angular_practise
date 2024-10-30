@@ -1,5 +1,5 @@
 {
-  "name": "form-library",
+  "name": "table-display-tag",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
@@ -7,11 +7,11 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/form-library/form-library.esm.js",
+  "unpkg": "dist/table-display-tag/table-display-tag.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/form-library/form-library.esm.js",
-      "require": "./dist/form-library/form-library.cjs.js"
+      "import": "./dist/table-display-tag/table-display-tag.esm.js",
+      "require": "./dist/table-display-tag/table-display-tag.cjs.js"
     },
     "./my-component": {
       "import": "./dist/components/my-component.js",
@@ -39,7 +39,7 @@
     "generate": "stencil generate"
   },
   "devDependencies": {
-    "@stencil/angular-output-target": "^0.9.1",
+    "@stencil/angular-output-target": "^0.10.0",
     "@stencil/core": "^4.7.0",
     "@types/jest": "^29.5.6",
     "@types/node": "^16.18.11",
@@ -47,8 +47,5 @@
     "jest-cli": "^29.7.0",
     "puppeteer": "^21.9.0"
   },
-  "license": "MIT",
-  "dependencies": {
-    "lodash": "^4.17.21"
-  }
+  "license": "MIT"
 }
