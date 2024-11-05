@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build angular-form-library && ng build table-display-lib && ng build user-details-library",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
