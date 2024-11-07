@@ -13,7 +13,13 @@ export class TableDisplayTag {
   tableBody;
   @State() tableItems;
   @Prop() tableData: any[] = []
-
+  // @Prop() tableData: any[] = [
+  //   { "id": "1", "name": "Google Pixel 6 Pro" },
+  //   { "id": "2", "name": "Apple iPhone 12 Mini, 256GB, Blue" }]
+  @Prop() first: string = 'default'
+  
+  
+  @Watch('first')
   @Watch('tableData')
   updateTableUI() {
     this.tableItems = this.tableData.map((element) => {
@@ -28,11 +34,14 @@ export class TableDisplayTag {
   }
 
   componentDidLoad() {
+    this.updateTableUI();
     console.log(this.data)
   }
 
   addItem() {
-    const temp = [{ "id": "1", "name": "Google Pixel 6 Pro", "data": { "color": "Cloudy White", "capacity": "128 GB" } }, { "id": "2", "name": "Apple iPhone 12 Mini, 256GB, Blue", "data": null }]
+    const temp = [
+      { "id": "1", "name": "Google Pixel 6 Pro" },
+      { "id": "2", "name": "Apple iPhone 12 Mini, 256GB, Blue" }];
     /// this.data = [...temp]
     this.tableData = [...temp]
   }
@@ -100,7 +109,7 @@ export class TableDisplayTag {
     return (
       <Host>
         <slot>
-          <h6>TABLE DISPLAY COMPONENT</h6>
+          <h6>TABLE DISPLAY COMPONENT - {this.first}</h6>
           <button onClick={this.addItem.bind(this)}>TEST</button>
 
           {/* <div>

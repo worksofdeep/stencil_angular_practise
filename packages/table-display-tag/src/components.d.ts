@@ -9,6 +9,7 @@ export namespace Components {
     interface TableDisplayTag {
         "columns": string[];
         "data": any[];
+        "first": string;
         "tableData": any[];
     }
 }
@@ -27,6 +28,7 @@ declare namespace LocalJSX {
     interface TableDisplayTag {
         "columns"?: string[];
         "data"?: any[];
+        "first"?: string;
         "tableData"?: any[];
     }
     interface IntrinsicElements {

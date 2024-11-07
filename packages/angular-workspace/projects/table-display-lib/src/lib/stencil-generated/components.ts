@@ -8,14 +8,14 @@ import { Components } from 'table-display-tag';
 
 
 @ProxyCmp({
-  inputs: ['columns', 'data', 'tableData']
+  inputs: ['columns', 'data', 'first', 'tableData']
 })
 @Component({
   selector: 'table-display-tag',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['columns', 'data', 'tableData'],
+  inputs: ['columns', 'data', 'first', 'tableData'],
 })
 export class TableDisplayTag {
   protected el: HTMLElement;
