@@ -12,13 +12,13 @@ export class TableDisplayTag {
   tableHeader;
   tableBody;
   @State() tableItems;
-  @Prop() tableData: any[] = []
+  @Prop({mutable: true}) tableData: any[] = []
   // @Prop() tableData: any[] = [
   //   { "id": "1", "name": "Google Pixel 6 Pro" },
   //   { "id": "2", "name": "Apple iPhone 12 Mini, 256GB, Blue" }]
   @Prop() first: string = 'default'
-  
-  
+
+
   @Watch('first')
   @Watch('tableData')
   updateTableUI() {
@@ -26,31 +26,27 @@ export class TableDisplayTag {
       return <tr><td>{element.id}</td>
         <td>{element.name}</td></tr>;
     })
-    console.log("inside table tag:", this.tableData)
   }
 
   componentWillLoad() {
-    console.log(this.data)
+    this.updateTableUI();
   }
 
-  componentDidLoad() {
-    this.updateTableUI();
-    console.log(this.data)
-  }
+  // componentDidLoad() {
+  //   this.updateTableUI();
+  // }
 
   addItem() {
     const temp = [
       { "id": "1", "name": "Google Pixel 6 Pro" },
-      { "id": "2", "name": "Apple iPhone 12 Mini, 256GB, Blue" }];
+      { "id": "2", "name": "Apple iPhone 12 Mini" }];
     /// this.data = [...temp]
     this.tableData = [...temp]
   }
 
-  @Watch('data')
-  watchDataHandler(newValue: boolean, oldValue: boolean) {
-    console.log('The old value of busy is: ', oldValue);
-    console.log('The new value of busy is: ', newValue);
-  }
+  // @Watch('data')
+  // watchDataHandler(newValue: boolean, oldValue: boolean) {
+  // }
 
   getHeader() {
 
@@ -107,32 +103,22 @@ export class TableDisplayTag {
 
   render() {
     return (
-      <Host>
-        <slot>
-          <h6>TABLE DISPLAY COMPONENT - {this.first}</h6>
-          <button onClick={this.addItem.bind(this)}>TEST</button>
-
-          {/* <div>
-            <table>
-              {this.getHeader()}
-              {this.getBody()}
-              {{this.getTableHTML()}}
-            </table>
-          </div> */}
-
-          <div>
-            <h6>TABLE</h6>
-            <table>
+      <div>
+        <h6>TABLE DISPLAY COMPONENT</h6>
+        <button onClick={this.addItem.bind(this)}>TEST</button>
+        <div>
+          <h6>TABLE</h6>
+          <table>
+            <tbody>
               <tr>
                 <th>ID</th>
                 <th>Name</th>
               </tr>
               {this.tableItems}
-            </table>
-          </div>
-
-        </slot>
-      </Host>
+            </tbody>
+          </table>
+        </div>
+      </div>
     );
   }
 }

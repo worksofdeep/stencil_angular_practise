@@ -29,5 +29,8 @@ export const config: Config = {
   ],
   testing: {
     browserHeadless: "new",
+    //collectCoverage: true, // Enables coverage collection
+    //coverageDirectory: 'coverage', // Output directory for coverage reports
+    //coverageReporters: ['html', 'text'], // Coverage report formats
   },
 };
