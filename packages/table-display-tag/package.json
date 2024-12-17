@@ -64,5 +64,8 @@
     "puppeteer": "^21.9.0",
     "storybook": "^8.4.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.6.3"
+  }
 }

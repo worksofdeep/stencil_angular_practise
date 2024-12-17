@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,9 @@ export class AppComponent {
   title = 'my-app';
   resetForm = false;
 
-  temp = [{ "id": "1", "name": "Google Pixel 6 Pro", "data": { "color": "Cloudy White", "capacity": "128 GB" } }, { "id": "2", "name": "Apple iPhone 12 Mini, 256GB, Blue", "data": null }]
+  temp: any[] = [
+    { "id": "1", "name": "Google Pixel 6 Pro" },
+    { "id": "2", "name": "Apple iPhone 12 Mini" }]
 
   ngOnInit() {
     this.temp = [...this.temp]
@@ -26,5 +28,14 @@ export class AppComponent {
   tableUpdated(event: any) {
     console.log("tableUpdated", event['detail'])
     this.temp = [...event['detail']]
+  }
+
+  addDummyRow(value: any) {
+    this.temp.push({
+      id: value,
+      name: `Product #${value}`
+    })
+
+    this.temp = [...this.temp]
   }
 }

@@ -1,5 +1,5 @@
 
-<user-details-form (formCompleted)="formSubmitted($event)" 
+<!-- <user-details-form (formCompleted)="formSubmitted($event)" 
 [resetForm]="resetForm"></user-details-form>
 
 <div>
@@ -10,7 +10,9 @@
 
 <my-component (tableUpdated)="tableUpdated($event)"></my-component>
 
-<hr>
+<hr> -->
 
+<p>Component Name: {{title}}</p>
+<button (click)="addDummyRow(temp.length + 1)">Add Dummy Product</button>
 <table-display-tag [tableData]="temp"></table-display-tag>
 
